@@ -29,8 +29,8 @@ use \SplitPHP\System;
 use \SplitPHP\Helpers;
 
 // Includes main class System:
-require_once "engine/kernel/class.helpers.php";
-require_once "engine/kernel/class.system.php";
+require_once "core/kernel/class.helpers.php";
+require_once "core/kernel/class.system.php";
 
 // Initiate the application, running the main class System:
 try {

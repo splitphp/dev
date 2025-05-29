@@ -2,7 +2,7 @@
 
 namespace application\routes;
 
-use \engine\WebService;
+use \core\WebService;
 
 class Site extends WebService
 {

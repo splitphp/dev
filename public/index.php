@@ -30,8 +30,8 @@ use \SplitPHP\System;
 use \SplitPHP\Helpers;
 
 // Includes main class System:
-require_once __DIR__ . "/../engine/kernel/class.system.php";
-require_once __DIR__ . "/../engine/kernel/class.helpers.php";
+require_once __DIR__ . "/../core/kernel/class.system.php";
+require_once __DIR__ . "/../core/kernel/class.helpers.php";
 
 // Initiate the application, running the main class System:
 try {

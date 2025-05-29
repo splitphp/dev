@@ -19,7 +19,7 @@
       "splitphp-module"
     ],
     "installer-paths": {
-      "engine/": [
+      "core/": [
         "type:splitphp-core"
       ],
       "modules/{$name}/": [

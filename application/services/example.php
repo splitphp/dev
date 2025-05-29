@@ -2,7 +2,7 @@
 
 namespace application\services;
 
-use \engine\Service;
+use \core\Service;
 
 class Example extends Service
 {
