@@ -1,0 +1,4 @@
+[submodule "core"]
+	path = core
+	url = git@github.com:splitphp/core.git
+	branch = develop
