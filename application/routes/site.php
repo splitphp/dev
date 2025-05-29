@@ -2,7 +2,7 @@
 
 namespace application\routes;
 
-use \core\WebService;
+use \SplitPHP\WebService;
 
 class Site extends WebService
 {

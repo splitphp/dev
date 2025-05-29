@@ -4,8 +4,8 @@
 set -e
 # Name of the upstream remote (change if you use a different name)
 UPSTREAM_NAME=upstream
-# Branch you want to sync (e.g., main or master)
-BRANCH=main
+# Branch you want to sync (e.g., master or master)
+BRANCH=master
 echo "Fetching updates from $UPSTREAM_NAME..."
 git fetch $UPSTREAM_NAME
 echo "Checking out $BRANCH branch..."
