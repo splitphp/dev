@@ -1,7 +1,8 @@
 <?php
 
-namespace Test\Routes;
+namespace Test;
 
+use \SplitPHP\EventListener;
 use \SplitPHP\WebService;
 
 class Routes extends WebService
@@ -12,6 +13,7 @@ class Routes extends WebService
 
     // Home Page Endpoints:
     $this->addEndpoint('GET', '/home', function ($params) {
+      EventListener::triggerEvent('onEventTest', [$params]);
       $message = "Aeeee testeeee!!!";
 
       $templateVars = [
