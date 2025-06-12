@@ -10,4 +10,16 @@ class Example extends Service
   {
     return "Welcome {$name} to SPLIT PHP, the lean, low learning curve PHP framework!";
   }
+
+  public function testProcedure()
+  {
+    $result = $this->getDao('Company')
+      ->generate_dateseries(
+        '2018-01-01',
+        '2018-01-10'
+      )
+      ->find("SELECT * FROM dateseries");
+
+    print_r($result);
+  }
 }
