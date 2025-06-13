@@ -2,7 +2,9 @@
 
 namespace application\services;
 
+use Exception;
 use \SplitPHP\Service;
+use \SplitPHP\Helpers;
 
 class Example extends Service
 {
@@ -21,5 +23,9 @@ class Example extends Service
       ->find("SELECT * FROM dateseries");
 
     print_r($result);
+  }
+
+  public function test(){
+    Helpers::cURL()->get('http://localhost:8000/vi/testeee');
   }
 }

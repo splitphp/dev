@@ -16,7 +16,7 @@ class Test extends Cli
      * For more info, refer to SPLIT PHP docs at www.splitphp.org/docs. 
      */
     $this->addCommand('', function ($args) {
-      $this->getService('example')->testProcedure();
+      $this->getService('example')->test();
     });
   }
 }
