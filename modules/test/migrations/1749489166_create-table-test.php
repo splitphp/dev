@@ -16,8 +16,10 @@ class CreateTableTest extends Migration{
       $this->Table('Test')
        ->id('id_test') // int primary key auto increment
        ->int('nr_int') // int
+       ->string('ds_key')
        ->string('ds_str', 100) // varchar(100)
        ->datetime('dt_birth') 
-         ->setDefaultValue(DbVocab::SQL_CURTIMESTAMP()); // default current timestamp
+       ->setDefaultValue(DbVocab::SQL_CURTIMESTAMP()) // default current timestamp
+       ->Index('KEY', DbVocab::IDX_UNIQUE)->onColumn('ds_key');
   }
 }
