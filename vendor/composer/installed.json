@@ -1,0 +1,620 @@
+{
+    "packages": [
+        {
+            "name": "composer/installers",
+            "version": "v1.12.0",
+            "version_normalized": "1.12.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/installers.git",
+                "reference": "d20a64ed3c94748397ff5973488761b22f6d3f19"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/installers/zipball/d20a64ed3c94748397ff5973488761b22f6d3f19",
+                "reference": "d20a64ed3c94748397ff5973488761b22f6d3f19",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0 || ^2.0"
+            },
+            "replace": {
+                "roundcube/plugin-installer": "*",
+                "shama/baton": "*"
+            },
+            "require-dev": {
+                "composer/composer": "1.6.* || ^2.0",
+                "composer/semver": "^1 || ^3",
+                "phpstan/phpstan": "^0.12.55",
+                "phpstan/phpstan-phpunit": "^0.12.16",
+                "symfony/phpunit-bridge": "^4.2 || ^5",
+                "symfony/process": "^2.3"
+            },
+            "time": "2021-09-13T08:19:44+00:00",
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Composer\\Installers\\Plugin",
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Composer\\Installers\\": "src/Composer/Installers"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kyle Robinson Young",
+                    "email": "kyle@dontkry.com",
+                    "homepage": "https://github.com/shama"
+                }
+            ],
+            "description": "A multi-framework Composer library installer",
+            "homepage": "https://composer.github.io/installers/",
+            "keywords": [
+                "Craft",
+                "Dolibarr",
+                "Eliasis",
+                "Hurad",
+                "ImageCMS",
+                "Kanboard",
+                "Lan Management System",
+                "MODX Evo",
+                "MantisBT",
+                "Mautic",
+                "Maya",
+                "OXID",
+                "Plentymarkets",
+                "Porto",
+                "RadPHP",
+                "SMF",
+                "Starbug",
+                "Thelia",
+                "Whmcs",
+                "WolfCMS",
+                "agl",
+                "aimeos",
+                "annotatecms",
+                "attogram",
+                "bitrix",
+                "cakephp",
+                "chef",
+                "cockpit",
+                "codeigniter",
+                "concrete5",
+                "croogo",
+                "dokuwiki",
+                "drupal",
+                "eZ Platform",
+                "elgg",
+                "expressionengine",
+                "fuelphp",
+                "grav",
+                "installer",
+                "itop",
+                "joomla",
+                "known",
+                "kohana",
+                "laravel",
+                "lavalite",
+                "lithium",
+                "magento",
+                "majima",
+                "mako",
+                "mediawiki",
+                "miaoxing",
+                "modulework",
+                "modx",
+                "moodle",
+                "osclass",
+                "pantheon",
+                "phpbb",
+                "piwik",
+                "ppi",
+                "processwire",
+                "puppet",
+                "pxcms",
+                "reindex",
+                "roundcube",
+                "shopware",
+                "silverstripe",
+                "sydes",
+                "sylius",
+                "symfony",
+                "tastyigniter",
+                "typo3",
+                "wordpress",
+                "yawik",
+                "zend",
+                "zikula"
+            ],
+            "support": {
+                "issues": "https://github.com/composer/installers/issues",
+                "source": "https://github.com/composer/installers/tree/v1.12.0"
+            },
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "install-path": "./installers"
+        },
+        {
+            "name": "lambdatt-php/addresses",
+            "version": "v0.1.0",
+            "version_normalized": "0.1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LambdaTT/addresses.git",
+                "reference": "dc9cbe36b3fa47ad3f6736f570262a69ca5e70bc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LambdaTT/addresses/zipball/dc9cbe36b3fa47ad3f6736f570262a69ca5e70bc",
+                "reference": "dc9cbe36b3fa47ad3f6736f570262a69ca5e70bc",
+                "shasum": ""
+            },
+            "time": "2025-06-26T21:02:17+00:00",
+            "type": "splitphp-module",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "SplitPHP\\": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gabriel Valentoni Guelfi",
+                    "email": "gabriel.valguelfi@gmail.com"
+                }
+            ],
+            "description": "A SplitPHP Framework plugin containing an address management system.",
+            "support": {
+                "issues": "https://github.com/LambdaTT/addresses/issues",
+                "source": "https://github.com/LambdaTT/addresses/tree/v0.1.0"
+            },
+            "install-path": "../../modules/addresses"
+        },
+        {
+            "name": "lambdatt-php/bpm",
+            "version": "v0.1.2",
+            "version_normalized": "0.1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LambdaTT/bpm.git",
+                "reference": "6b6469c9967f028702b7089305528704c9f6a355"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LambdaTT/bpm/zipball/6b6469c9967f028702b7089305528704c9f6a355",
+                "reference": "6b6469c9967f028702b7089305528704c9f6a355",
+                "shasum": ""
+            },
+            "time": "2025-06-25T21:52:42+00:00",
+            "type": "splitphp-module",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "SplitPHP\\": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gabriel Valentoni Guelfi",
+                    "email": "gabriel.valguelfi@gmail.com"
+                }
+            ],
+            "description": "A SplitPHP Framework plugin containing a BPM system.",
+            "support": {
+                "issues": "https://github.com/LambdaTT/bpm/issues",
+                "source": "https://github.com/LambdaTT/bpm/tree/v0.1.2"
+            },
+            "install-path": "../../modules/bpm"
+        },
+        {
+            "name": "lambdatt-php/filemanager",
+            "version": "v0.1.2",
+            "version_normalized": "0.1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LambdaTT/filemanager.git",
+                "reference": "6bb6b3c1b92ac5c39ee1a6933987d679699f2629"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LambdaTT/filemanager/zipball/6bb6b3c1b92ac5c39ee1a6933987d679699f2629",
+                "reference": "6bb6b3c1b92ac5c39ee1a6933987d679699f2629",
+                "shasum": ""
+            },
+            "time": "2025-06-25T21:52:48+00:00",
+            "type": "splitphp-module",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "SplitPHP\\": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gabriel Valentoni Guelfi",
+                    "email": "gabriel.valguelfi@gmail.com"
+                }
+            ],
+            "description": "A SplitPHP Framework plugin creates an abstraction layer to handle and manage file uploading.",
+            "support": {
+                "issues": "https://github.com/LambdaTT/filemanager/issues",
+                "source": "https://github.com/LambdaTT/filemanager/tree/v0.1.2"
+            },
+            "install-path": "../../modules/filemanager"
+        },
+        {
+            "name": "lambdatt-php/iam",
+            "version": "v1.0.2",
+            "version_normalized": "1.0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LambdaTT/iam.git",
+                "reference": "1ded493f2be4060ddf3c5a51744d1c13f7533bc7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LambdaTT/iam/zipball/1ded493f2be4060ddf3c5a51744d1c13f7533bc7",
+                "reference": "1ded493f2be4060ddf3c5a51744d1c13f7533bc7",
+                "shasum": ""
+            },
+            "time": "2025-06-26T21:01:05+00:00",
+            "type": "splitphp-module",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "SplitPHP\\": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gabriel Valentoni Guelfi",
+                    "email": "gabriel.valguelfi@gmail.com"
+                }
+            ],
+            "description": "A SplitPHP Framework plugin for an Identity and Access Management system.",
+            "support": {
+                "issues": "https://github.com/LambdaTT/iam/issues",
+                "source": "https://github.com/LambdaTT/iam/tree/v1.0.2"
+            },
+            "install-path": "../../modules/iam"
+        },
+        {
+            "name": "lambdatt-php/log",
+            "version": "v0.1.6",
+            "version_normalized": "0.1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LambdaTT/log.git",
+                "reference": "eb5ea448d01bee8eaf179bb25cc47d14b41dbfc4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LambdaTT/log/zipball/eb5ea448d01bee8eaf179bb25cc47d14b41dbfc4",
+                "reference": "eb5ea448d01bee8eaf179bb25cc47d14b41dbfc4",
+                "shasum": ""
+            },
+            "time": "2025-06-20T03:06:59+00:00",
+            "type": "splitphp-module",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "SplitPHP\\": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gabriel Valentoni Guelfi",
+                    "email": "gabriel.valguelfi@gmail.com"
+                }
+            ],
+            "description": "A SplitPHP Framework plugin to capture, organize and view the framework's logs.",
+            "support": {
+                "issues": "https://github.com/LambdaTT/log/issues",
+                "source": "https://github.com/LambdaTT/log/tree/v0.1.6"
+            },
+            "install-path": "../../modules/log"
+        },
+        {
+            "name": "lambdatt-php/messaging",
+            "version": "v0.1.1",
+            "version_normalized": "0.1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LambdaTT/messaging.git",
+                "reference": "95e25dd842423fd4aeae990398b19328e7e49ec1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LambdaTT/messaging/zipball/95e25dd842423fd4aeae990398b19328e7e49ec1",
+                "reference": "95e25dd842423fd4aeae990398b19328e7e49ec1",
+                "shasum": ""
+            },
+            "time": "2025-06-20T03:07:25+00:00",
+            "type": "splitphp-module",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "SplitPHP\\": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gabriel Valentoni Guelfi",
+                    "email": "gabriel.valguelfi@gmail.com"
+                }
+            ],
+            "description": "A SplitPHP Framework plugin which allows a messaging and notification system",
+            "support": {
+                "issues": "https://github.com/LambdaTT/messaging/issues",
+                "source": "https://github.com/LambdaTT/messaging/tree/v0.1.1"
+            },
+            "install-path": "../../modules/messaging"
+        },
+        {
+            "name": "lambdatt-php/modcontrol",
+            "version": "v0.1.4",
+            "version_normalized": "0.1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LambdaTT/modcontrol.git",
+                "reference": "a410ba5d91f77149a37d0e81d2dae667101e8f7e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LambdaTT/modcontrol/zipball/a410ba5d91f77149a37d0e81d2dae667101e8f7e",
+                "reference": "a410ba5d91f77149a37d0e81d2dae667101e8f7e",
+                "shasum": ""
+            },
+            "time": "2025-06-26T22:23:14+00:00",
+            "type": "splitphp-module",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "SplitPHP\\": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gabriel Valentoni Guelfi",
+                    "email": "gabriel.valguelfi@gmail.com"
+                }
+            ],
+            "description": "A SplitPHP Framework plugin to provide control over modules and entities inside your application.",
+            "support": {
+                "issues": "https://github.com/LambdaTT/modcontrol/issues",
+                "source": "https://github.com/LambdaTT/modcontrol/tree/v0.1.4"
+            },
+            "install-path": "../../modules/modcontrol"
+        },
+        {
+            "name": "lambdatt-php/multitenancy",
+            "version": "v0.1.1",
+            "version_normalized": "0.1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LambdaTT/multitenancy.git",
+                "reference": "636fea8b9ad213736c5e2a577262929edf8f4f5e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LambdaTT/multitenancy/zipball/636fea8b9ad213736c5e2a577262929edf8f4f5e",
+                "reference": "636fea8b9ad213736c5e2a577262929edf8f4f5e",
+                "shasum": ""
+            },
+            "time": "2025-06-26T15:40:49+00:00",
+            "type": "splitphp-module",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "SplitPHP\\": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gabriel Valentoni Guelfi",
+                    "email": "gabriel.valguelfi@gmail.com"
+                }
+            ],
+            "description": "A SplitPHP Framework plugin for multitenancy support.",
+            "support": {
+                "issues": "https://github.com/LambdaTT/multitenancy/issues",
+                "source": "https://github.com/LambdaTT/multitenancy/tree/v0.1.1"
+            },
+            "install-path": "../../modules/multitenancy"
+        },
+        {
+            "name": "lambdatt-php/settings",
+            "version": "v0.1.2",
+            "version_normalized": "0.1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LambdaTT/settings.git",
+                "reference": "a33e6354361d8d5a5fc45331ea354cbf05ee41a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LambdaTT/settings/zipball/a33e6354361d8d5a5fc45331ea354cbf05ee41a4",
+                "reference": "a33e6354361d8d5a5fc45331ea354cbf05ee41a4",
+                "shasum": ""
+            },
+            "time": "2025-06-26T15:40:52+00:00",
+            "type": "splitphp-module",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "SplitPHP\\": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gabriel Valentoni Guelfi",
+                    "email": "gabriel.valguelfi@gmail.com"
+                }
+            ],
+            "description": "A SplitPHP Framework plugin for create a general purpose settings control",
+            "support": {
+                "issues": "https://github.com/LambdaTT/settings/issues",
+                "source": "https://github.com/LambdaTT/settings/tree/v0.1.2"
+            },
+            "install-path": "../../modules/settings"
+        },
+        {
+            "name": "lambdatt-php/utils",
+            "version": "v0.1.2",
+            "version_normalized": "0.1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LambdaTT/utils.git",
+                "reference": "d7be573ab5bb57b4f08911dfd997fe620bb7af03"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LambdaTT/utils/zipball/d7be573ab5bb57b4f08911dfd997fe620bb7af03",
+                "reference": "d7be573ab5bb57b4f08911dfd997fe620bb7af03",
+                "shasum": ""
+            },
+            "time": "2025-06-26T21:02:59+00:00",
+            "type": "splitphp-module",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "SplitPHP\\": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gabriel Valentoni Guelfi",
+                    "email": "gabriel.valguelfi@gmail.com"
+                }
+            ],
+            "description": "A SplitPHP Framework plugin which provides helpers and general utilities out of the box.",
+            "support": {
+                "issues": "https://github.com/LambdaTT/utils/issues",
+                "source": "https://github.com/LambdaTT/utils/tree/v0.1.2"
+            },
+            "install-path": "../../modules/utils"
+        },
+        {
+            "name": "oomphinc/composer-installers-extender",
+            "version": "2.0.1",
+            "version_normalized": "2.0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oomphinc/composer-installers-extender.git",
+                "reference": "cbf4b6f9a24153b785d09eee755b995ba87bd5f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oomphinc/composer-installers-extender/zipball/cbf4b6f9a24153b785d09eee755b995ba87bd5f9",
+                "reference": "cbf4b6f9a24153b785d09eee755b995ba87bd5f9",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.1 || ^2.0",
+                "composer/installers": "^1.0 || ^2.0",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "composer/composer": "^2.0",
+                "phpunit/phpunit": "^7.2",
+                "squizlabs/php_codesniffer": "^3.3"
+            },
+            "time": "2021-12-15T12:32:42+00:00",
+            "type": "composer-plugin",
+            "extra": {
+                "class": "OomphInc\\ComposerInstallersExtender\\Plugin"
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "OomphInc\\ComposerInstallersExtender\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stephen Beemsterboer",
+                    "email": "stephen@oomphinc.com",
+                    "homepage": "https://github.com/balbuf"
+                },
+                {
+                    "name": "Nathan Dentzau",
+                    "email": "nate@oomphinc.com",
+                    "homepage": "http://oomph.is/ndentzau"
+                }
+            ],
+            "description": "Extend the composer/installers plugin to accept any arbitrary package type.",
+            "homepage": "http://www.oomphinc.com/",
+            "support": {
+                "issues": "https://github.com/oomphinc/composer-installers-extender/issues",
+                "source": "https://github.com/oomphinc/composer-installers-extender/tree/2.0.1"
+            },
+            "install-path": "../oomphinc/composer-installers-extender"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

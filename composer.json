@@ -4,9 +4,18 @@
   "type": "project",
   "license": "MIT",
   "require": {
-    "splitphp/core": "^2.0.0",
     "composer/installers": "^1.12",
-    "oomphinc/composer-installers-extender": "^2.0"
+    "oomphinc/composer-installers-extender": "^2.0",
+    "lambdatt-php/addresses":"^0.1",
+    "lambdatt-php/bpm":"^0.1",
+    "lambdatt-php/filemanager":"^0.1",
+    "lambdatt-php/iam":"^1.0",
+    "lambdatt-php/log":"^0.1",
+    "lambdatt-php/messaging":"^0.1",
+    "lambdatt-php/modcontrol":"^0.1",
+    "lambdatt-php/multitenancy":"^0.1",
+    "lambdatt-php/settings":"^0.1",
+    "lambdatt-php/utils":"^0.1"
   },
   "scripts": {
     "post-install-cmd": [
@@ -34,5 +43,11 @@
       "name": "Gabriel Valentoni Guelfi",
       "email": "gabriel.valguelfi@gmail.com"
     }
-  ]
+  ],
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true,
+      "oomphinc/composer-installers-extender": true
+    }
+  }
 }
