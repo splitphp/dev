@@ -316,20 +316,20 @@
         },
         {
             "name": "lambdatt-php/log",
-            "version": "v0.1.6",
-            "version_normalized": "0.1.6.0",
+            "version": "v0.2.3",
+            "version_normalized": "0.2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LambdaTT/log.git",
-                "reference": "eb5ea448d01bee8eaf179bb25cc47d14b41dbfc4"
+                "reference": "afc8a3dd21faa64eaa0324649e0a69239b1b34cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LambdaTT/log/zipball/eb5ea448d01bee8eaf179bb25cc47d14b41dbfc4",
-                "reference": "eb5ea448d01bee8eaf179bb25cc47d14b41dbfc4",
+                "url": "https://api.github.com/repos/LambdaTT/log/zipball/afc8a3dd21faa64eaa0324649e0a69239b1b34cf",
+                "reference": "afc8a3dd21faa64eaa0324649e0a69239b1b34cf",
                 "shasum": ""
             },
-            "time": "2025-06-20T03:06:59+00:00",
+            "time": "2025-07-01T04:22:47+00:00",
             "type": "splitphp-module",
             "installation-source": "dist",
             "autoload": {
@@ -350,7 +350,7 @@
             "description": "A SplitPHP Framework plugin to capture, organize and view the framework's logs.",
             "support": {
                 "issues": "https://github.com/LambdaTT/log/issues",
-                "source": "https://github.com/LambdaTT/log/tree/v0.1.6"
+                "source": "https://github.com/LambdaTT/log/tree/v0.2.3"
             },
             "install-path": "../../modules/log"
         },

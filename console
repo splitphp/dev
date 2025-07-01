@@ -38,6 +38,6 @@ try {
     die;
 } catch (Exception $exc) {
     Helpers::Log()->error('sys_error', $exc);
-    echo "ERROR[System]: " . $exc->getMessage() . " In file '" . $exc->getFile() . "', line " . $exc->getLine() . ".";
+    echo "\033[31mERROR[System]: " . $exc->getMessage() . " In file '" . $exc->getFile() . "', line " . $exc->getLine() . ".\033[0m";
     echo PHP_EOL;
 }
