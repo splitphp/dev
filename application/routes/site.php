@@ -1,8 +1,9 @@
 <?php
 
-namespace application\routes;
+namespace Application\Routes;
 
 use \SplitPHP\WebService;
+use \SplitPHP\Request;
 
 class Site extends WebService
 {
@@ -11,17 +12,11 @@ class Site extends WebService
     $this->setAntiXsrfValidation(false);
 
     // Home Page Endpoints:
-    $this->addEndpoint('GET', '/home', function ($params) {
-      $message = $this->getService('example')->welcomeMsg();
-
-      $templateVars = [
-        'message' => $message,
-        'params' => $params
-      ];
+    $this->addEndpoint('GET', '/home/?test?', function ($input) {
 
       return $this->response
         ->withStatus(200)
-        ->withHTML($this->renderTemplate('site/home', $templateVars));
+        ->withData($input);
     });
   }
 }
