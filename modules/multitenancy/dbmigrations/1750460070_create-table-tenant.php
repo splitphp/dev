@@ -2,7 +2,7 @@
 
 namespace Multitenancy\Migrations;
 
-use SplitPHP\DbMigrations\Migration;
+use SplitPHP\DbManager\Migration;
 use SplitPHP\Database\DbVocab;
 
 class CreateTableTenant extends Migration
