@@ -12,7 +12,7 @@ class Site extends WebService
     $this->setAntiXsrfValidation(false);
 
     // Home Page Endpoints:
-    $this->addEndpoint('GET', '/home/?test?', function ($input) {
+    $this->addEndpoint(['POST','PUT'], '/home/?test?', function ($input) {
 
       return $this->response
         ->withStatus(200)
