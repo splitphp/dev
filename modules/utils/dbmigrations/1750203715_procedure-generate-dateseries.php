@@ -2,7 +2,7 @@
 
 namespace Utils\Migrations;
 
-use SplitPHP\DbManager\Migration;
+use SplitPHP\DbMigrations\Migration;
 use SplitPHP\Database\DbVocab;
 
 class ProcedureGenerateDateseries extends Migration

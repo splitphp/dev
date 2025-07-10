@@ -418,16 +418,16 @@
         },
         {
             "name": "lambdatt-php/multitenancy",
-            "version": "v0.1.1",
+            "version": "v0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LambdaTT/multitenancy.git",
-                "reference": "636fea8b9ad213736c5e2a577262929edf8f4f5e"
+                "reference": "9e3a3775aba4ac95b9b83a44d626c1a811c58107"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LambdaTT/multitenancy/zipball/636fea8b9ad213736c5e2a577262929edf8f4f5e",
-                "reference": "636fea8b9ad213736c5e2a577262929edf8f4f5e",
+                "url": "https://api.github.com/repos/LambdaTT/multitenancy/zipball/9e3a3775aba4ac95b9b83a44d626c1a811c58107",
+                "reference": "9e3a3775aba4ac95b9b83a44d626c1a811c58107",
                 "shasum": ""
             },
             "type": "splitphp-module",
@@ -449,9 +449,9 @@
             "description": "A SplitPHP Framework plugin for multitenancy support.",
             "support": {
                 "issues": "https://github.com/LambdaTT/multitenancy/issues",
-                "source": "https://github.com/LambdaTT/multitenancy/tree/v0.1.1"
+                "source": "https://github.com/LambdaTT/multitenancy/tree/v0.1.2"
             },
-            "time": "2025-06-26T15:40:49+00:00"
+            "time": "2025-07-10T20:04:18+00:00"
         },
         {
             "name": "lambdatt-php/settings",
@@ -492,16 +492,16 @@
         },
         {
             "name": "lambdatt-php/utils",
-            "version": "v0.1.2",
+            "version": "v0.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LambdaTT/utils.git",
-                "reference": "d7be573ab5bb57b4f08911dfd997fe620bb7af03"
+                "reference": "d976c816b937e3cd940ab748ccec8f18154f7363"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LambdaTT/utils/zipball/d7be573ab5bb57b4f08911dfd997fe620bb7af03",
-                "reference": "d7be573ab5bb57b4f08911dfd997fe620bb7af03",
+                "url": "https://api.github.com/repos/LambdaTT/utils/zipball/d976c816b937e3cd940ab748ccec8f18154f7363",
+                "reference": "d976c816b937e3cd940ab748ccec8f18154f7363",
                 "shasum": ""
             },
             "type": "splitphp-module",
@@ -523,9 +523,9 @@
             "description": "A SplitPHP Framework plugin which provides helpers and general utilities out of the box.",
             "support": {
                 "issues": "https://github.com/LambdaTT/utils/issues",
-                "source": "https://github.com/LambdaTT/utils/tree/v0.1.2"
+                "source": "https://github.com/LambdaTT/utils/tree/v0.1.3"
             },
-            "time": "2025-06-26T21:02:59+00:00"
+            "time": "2025-07-10T02:06:50+00:00"
         },
         {
             "name": "oomphinc/composer-installers-extender",

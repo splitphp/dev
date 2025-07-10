@@ -11,7 +11,7 @@ class Listeners extends EventListener
 {
   private array $evtIds = [];
 
-  public function init()
+  public function init(): void
   {
     require_once CORE_PATH . '/database/' . DBTYPE . '/class.dbmetadata.php';
 
