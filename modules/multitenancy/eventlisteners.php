@@ -2,9 +2,13 @@
 
 namespace Multitenancy\EventListeners;
 
+use SplitPHP\System;
+use SplitPHP\Cli;
 use SplitPHP\EventListener;
-use SplitPHP\Database\Dao;
+use SplitPHP\Database\Database;
+use SplitPHP\Database\Dbmetadata;
 use Exception;
+use SplitPHP\Utils;
 
 class Multitenancy extends EventListener
 {
@@ -32,7 +36,25 @@ class Multitenancy extends EventListener
       define('TENANT_NAME', $tenant->ds_name);
 
       // Change database connections to point to tenant's database:
-      Dao::selectDatabase($tenant->ds_database_name);
+      Database::setName($tenant->ds_database_name);
+    });
+
+    $this->addEventListener('command.before', function ($evt) {
+      if (!Dbmetadata::tableExists('MTN_TENANT')) return;
+
+      $evt->stopPropagation();
+
+      $tenants = $this->getService('multitenancy/tenant')->list();
+      if (empty($tenants)) {
+        throw new Exception("No tenants found. Please create at least one tenant before running this command.");
+      }
+
+      $execution = $evt->info();
+      foreach ($tenants as $t) {
+        Database::setName($t->ds_database_name);
+
+        System::runCommand($execution);
+      }
     });
   }
 }
