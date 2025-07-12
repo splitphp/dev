@@ -13,7 +13,7 @@
     "lambdatt-php/log":"^0.2",
     "lambdatt-php/messaging":"^0.1",
     "lambdatt-php/modcontrol":"^0.1",
-    "lambdatt-php/multitenancy":"^0.1",
+    "lambdatt-php/multitenancy":"^0.1.2",
     "lambdatt-php/settings":"^0.1",
     "lambdatt-php/utils":"^0.1"
   },

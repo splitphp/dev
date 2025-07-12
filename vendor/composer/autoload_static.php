@@ -32,8 +32,8 @@ class ComposerStaticInitffe33717c8e7dc210b0316ae48d558fe
             5 => __DIR__ . '/../..' . '/modules/messaging',
             6 => __DIR__ . '/../..' . '/modules/modcontrol',
             7 => __DIR__ . '/../..' . '/modules/settings',
-            8 => __DIR__ . '/../..' . '/modules/multitenancy',
-            9 => __DIR__ . '/../..' . '/modules/utils',
+            8 => __DIR__ . '/../..' . '/modules/utils',
+            9 => __DIR__ . '/../..' . '/modules/multitenancy',
         ),
         'OomphInc\\ComposerInstallersExtender\\' => 
         array (
