@@ -3,6 +3,7 @@
 namespace Multitenancy\EventListeners;
 
 use SplitPHP\System;
+use SplitPHP\Utils;
 use SplitPHP\EventListener;
 use SplitPHP\Database\Database;
 use SplitPHP\Database\Dbmetadata;
@@ -42,7 +43,6 @@ class Multitenancy extends EventListener
 
       $evt->stopPropagation();
 
-
       $tenants = $this->getService('multitenancy/tenant')->list();
       if (empty($tenants)) {
         throw new Exception("No tenants found. Please create at least one tenant before running this command.");
@@ -50,6 +50,9 @@ class Multitenancy extends EventListener
 
       $execution = $evt->info();
       foreach ($tenants as $t) {
+        Utils::printLn();
+        Utils::printLn("[MODULE MULTITENANCY]: Executing command for tenant: '{$t->ds_name} ({$t->ds_key})'");
+        Utils::printLn();
         Database::setName($t->ds_database_name);
 
         System::runCommand($execution);
