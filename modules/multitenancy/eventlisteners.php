@@ -13,6 +13,8 @@ class Multitenancy extends EventListener
 {
   public function init(): void
   {
+    require_once CORE_PATH . '/database/' . Database::getRdbmsName() . '/class.dbmetadata.php';
+
     $this->addEventListener('request.before', function ($evt) {
       // Exclude Logs and API Docs from multitenancy:
       if (preg_match('/^\/log(?:$|\/.*)$/', $_SERVER['REQUEST_URI']) || $_SERVER['REQUEST_URI'] == '/') return;
@@ -51,7 +53,7 @@ class Multitenancy extends EventListener
       $execution = $evt->info();
       foreach ($tenants as $t) {
         Utils::printLn();
-        Utils::printLn("[MODULE MULTITENANCY]: Executing command for tenant: '{$t->ds_name} ({$t->ds_key})'");
+        Utils::printLn("\033[35m[MODULE MULTITENANCY]: Executing command for tenant: \033[32m'{$t->ds_name} ({$t->ds_key})'\033[0m");
         Utils::printLn();
         Database::setName($t->ds_database_name);
 
