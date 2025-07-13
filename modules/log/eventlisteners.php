@@ -3,6 +3,7 @@
 namespace Log\EventListeners;
 
 use SplitPHP\Database\Dao;
+use SplitPHP\Database\Database;
 use SplitPHP\EventListener;
 use SplitPHP\Database\Dbmetadata;
 use Exception;
@@ -13,7 +14,7 @@ class Listeners extends EventListener
 
   public function init(): void
   {
-    require_once CORE_PATH . '/database/' . DBTYPE . '/class.dbmetadata.php';
+    require_once CORE_PATH . '/database/' . Database::getRdbmsName() . '/class.dbmetadata.php';
 
     $this->evtIds['log.any'] = $this->addEventListener('log.any', function ($event) {
       if (!Dbmetadata::tableExists('LOG_RECORD')) {

@@ -3,12 +3,10 @@
 namespace Multitenancy\EventListeners;
 
 use SplitPHP\System;
-use SplitPHP\Cli;
 use SplitPHP\EventListener;
 use SplitPHP\Database\Database;
 use SplitPHP\Database\Dbmetadata;
 use Exception;
-use SplitPHP\Utils;
 
 class Multitenancy extends EventListener
 {
@@ -43,6 +41,7 @@ class Multitenancy extends EventListener
       if (!Dbmetadata::tableExists('MTN_TENANT')) return;
 
       $evt->stopPropagation();
+
 
       $tenants = $this->getService('multitenancy/tenant')->list();
       if (empty($tenants)) {

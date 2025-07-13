@@ -5,13 +5,14 @@ namespace Filemanager\Commands;
 use SplitPHP\AppLoader;
 use SplitPHP\Cli;
 use SplitPHP\Database\Dao;
+use SplitPHP\Database\Database;
 use SplitPHP\ModLoader;
 use SplitPHP\Utils;
 use SplitPHP\ObjLoader;
 
 class Commands extends Cli
 {
-  public function init()
+  public function init(): void
   {
     $this->addCommand('modules:list', function ($args) {
       $getRows = function ($params) {
@@ -69,7 +70,7 @@ class Commands extends Cli
 
     $this->addCommand('modules:map', function ($args) {
       require_once CORE_PATH . '/database/class.vocab.php';
-      require_once CORE_PATH . '/database/' . DBTYPE . '/class.sql.php';
+      require_once CORE_PATH . '/database/' . Database::getRdbmsName() . '/class.sql.php';
       require_once CORE_PATH . '/dbmigrations/class.migration.php';
 
       $moduleName = $args['--module'] ?? null;

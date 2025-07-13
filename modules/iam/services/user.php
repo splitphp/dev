@@ -357,7 +357,7 @@ class User extends Service
    */
   public function filterUserData(&$data)
   {
-    require_once CORE_PATH . '/database/' . DBTYPE . '/class.dbmetadata.php';
+    require_once CORE_PATH . '/database/' . Database::getRdbmsName() . '/class.dbmetadata.php';
     $tbInfo = Dbmetadata::tbInfo('IAM_USER');
 
     $data = $this->getService('utils/misc')->dataWhiteList($data, array_map(function ($c) {
@@ -374,7 +374,7 @@ class User extends Service
    */
   public function removeUserData(&$data)
   {
-    require_once CORE_PATH . '/database/' . DBTYPE . '/class.dbmetadata.php';
+    require_once CORE_PATH . '/database/' . Database::getRdbmsName() . '/class.dbmetadata.php';
     $tbInfo = Dbmetadata::tbInfo('IAM_USER');
 
     $data = $this->getService('utils/misc')->dataBlackList($data, array_map(function ($c) {
