@@ -15,7 +15,7 @@ class PopulatePerson extends Seed
      * 
      */
     $this->SeedTable('Person', batchSize: 100)
-      ->onlyRunInEnvs(['dev', 'test']) // Specify environments where this seed should run
+      ->onlyRunInEnvs(['dev', 'test', 'development']) // Specify environments where this seed should run
       ->onField('ds_key', true)->setByFunction(fn() => 'prs-' . uniqid())
       ->onField('name')->setRandomStr(1, 100)
       ->onField('species')->setFixedValue('Human');

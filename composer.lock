@@ -418,16 +418,16 @@
         },
         {
             "name": "lambdatt-php/multitenancy",
-            "version": "v0.1.3",
+            "version": "v0.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LambdaTT/multitenancy.git",
-                "reference": "0f5c8f2c5fa36b71ce77b81b1dfda172827b9251"
+                "reference": "1f3a37dd29e845714ce46c3fd8b326d7af208dd5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LambdaTT/multitenancy/zipball/0f5c8f2c5fa36b71ce77b81b1dfda172827b9251",
-                "reference": "0f5c8f2c5fa36b71ce77b81b1dfda172827b9251",
+                "url": "https://api.github.com/repos/LambdaTT/multitenancy/zipball/1f3a37dd29e845714ce46c3fd8b326d7af208dd5",
+                "reference": "1f3a37dd29e845714ce46c3fd8b326d7af208dd5",
                 "shasum": ""
             },
             "type": "splitphp-module",
@@ -449,9 +449,9 @@
             "description": "A SplitPHP Framework plugin for multitenancy support.",
             "support": {
                 "issues": "https://github.com/LambdaTT/multitenancy/issues",
-                "source": "https://github.com/LambdaTT/multitenancy/tree/v0.1.3"
+                "source": "https://github.com/LambdaTT/multitenancy/tree/v0.1.4"
             },
-            "time": "2025-07-14T20:11:12+00:00"
+            "time": "2025-07-14T22:13:30+00:00"
         },
         {
             "name": "lambdatt-php/settings",
