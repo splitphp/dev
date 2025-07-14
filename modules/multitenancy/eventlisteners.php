@@ -44,13 +44,19 @@ class Multitenancy extends EventListener
       if (!Dbmetadata::tableExists('MTN_TENANT')) return;
 
       $evt->stopPropagation();
+      $execution = $evt->info();
 
-      $tenants = $this->getService('multitenancy/tenant')->list();
+      if (array_key_exists('--tenant-key', $execution->getArgs())) {
+        $tenantKey = $execution->getArgs()['--tenant-key'];
+        $tenants = [$this->getService('multitenancy/tenant')->get($tenantKey)];
+      } else {
+        $tenants = $this->getService('multitenancy/tenant')->list();
+      }
+
       if (empty($tenants)) {
         throw new Exception("No tenants found. Please create at least one tenant before running this command.");
       }
 
-      $execution = $evt->info();
       foreach ($tenants as $t) {
         Utils::printLn();
         Utils::printLn("\033[35m[MODULE MULTITENANCY]: Executing command for tenant: \033[32m'{$t->ds_name} ({$t->ds_key})'\033[0m");

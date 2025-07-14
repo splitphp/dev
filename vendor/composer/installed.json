@@ -196,20 +196,20 @@
         },
         {
             "name": "lambdatt-php/bpm",
-            "version": "v0.1.2",
-            "version_normalized": "0.1.2.0",
+            "version": "v0.1.3",
+            "version_normalized": "0.1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LambdaTT/bpm.git",
-                "reference": "6b6469c9967f028702b7089305528704c9f6a355"
+                "reference": "b326adad84aa6f72296bd01f0fe2f257390cb01a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LambdaTT/bpm/zipball/6b6469c9967f028702b7089305528704c9f6a355",
-                "reference": "6b6469c9967f028702b7089305528704c9f6a355",
+                "url": "https://api.github.com/repos/LambdaTT/bpm/zipball/b326adad84aa6f72296bd01f0fe2f257390cb01a",
+                "reference": "b326adad84aa6f72296bd01f0fe2f257390cb01a",
                 "shasum": ""
             },
-            "time": "2025-06-25T21:52:42+00:00",
+            "time": "2025-07-14T20:10:25+00:00",
             "type": "splitphp-module",
             "installation-source": "dist",
             "autoload": {
@@ -230,26 +230,26 @@
             "description": "A SplitPHP Framework plugin containing a BPM system.",
             "support": {
                 "issues": "https://github.com/LambdaTT/bpm/issues",
-                "source": "https://github.com/LambdaTT/bpm/tree/v0.1.2"
+                "source": "https://github.com/LambdaTT/bpm/tree/v0.1.3"
             },
             "install-path": "../../modules/bpm"
         },
         {
             "name": "lambdatt-php/filemanager",
-            "version": "v0.1.2",
-            "version_normalized": "0.1.2.0",
+            "version": "v0.1.3",
+            "version_normalized": "0.1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LambdaTT/filemanager.git",
-                "reference": "6bb6b3c1b92ac5c39ee1a6933987d679699f2629"
+                "reference": "dd8c1126411de418c6b2253fb7ba7d7c87397caa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LambdaTT/filemanager/zipball/6bb6b3c1b92ac5c39ee1a6933987d679699f2629",
-                "reference": "6bb6b3c1b92ac5c39ee1a6933987d679699f2629",
+                "url": "https://api.github.com/repos/LambdaTT/filemanager/zipball/dd8c1126411de418c6b2253fb7ba7d7c87397caa",
+                "reference": "dd8c1126411de418c6b2253fb7ba7d7c87397caa",
                 "shasum": ""
             },
-            "time": "2025-06-25T21:52:48+00:00",
+            "time": "2025-07-14T20:10:33+00:00",
             "type": "splitphp-module",
             "installation-source": "dist",
             "autoload": {
@@ -270,26 +270,26 @@
             "description": "A SplitPHP Framework plugin creates an abstraction layer to handle and manage file uploading.",
             "support": {
                 "issues": "https://github.com/LambdaTT/filemanager/issues",
-                "source": "https://github.com/LambdaTT/filemanager/tree/v0.1.2"
+                "source": "https://github.com/LambdaTT/filemanager/tree/v0.1.3"
             },
             "install-path": "../../modules/filemanager"
         },
         {
             "name": "lambdatt-php/iam",
-            "version": "v1.0.2",
-            "version_normalized": "1.0.2.0",
+            "version": "v1.0.3",
+            "version_normalized": "1.0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LambdaTT/iam.git",
-                "reference": "1ded493f2be4060ddf3c5a51744d1c13f7533bc7"
+                "reference": "d22d30f6ff5a1548e1f35110810360154dabb0fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LambdaTT/iam/zipball/1ded493f2be4060ddf3c5a51744d1c13f7533bc7",
-                "reference": "1ded493f2be4060ddf3c5a51744d1c13f7533bc7",
+                "url": "https://api.github.com/repos/LambdaTT/iam/zipball/d22d30f6ff5a1548e1f35110810360154dabb0fe",
+                "reference": "d22d30f6ff5a1548e1f35110810360154dabb0fe",
                 "shasum": ""
             },
-            "time": "2025-06-26T21:01:05+00:00",
+            "time": "2025-07-14T20:10:38+00:00",
             "type": "splitphp-module",
             "installation-source": "dist",
             "autoload": {
@@ -310,26 +310,26 @@
             "description": "A SplitPHP Framework plugin for an Identity and Access Management system.",
             "support": {
                 "issues": "https://github.com/LambdaTT/iam/issues",
-                "source": "https://github.com/LambdaTT/iam/tree/v1.0.2"
+                "source": "https://github.com/LambdaTT/iam/tree/v1.0.3"
             },
             "install-path": "../../modules/iam"
         },
         {
             "name": "lambdatt-php/log",
-            "version": "v0.2.3",
-            "version_normalized": "0.2.3.0",
+            "version": "v0.2.4",
+            "version_normalized": "0.2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LambdaTT/log.git",
-                "reference": "afc8a3dd21faa64eaa0324649e0a69239b1b34cf"
+                "reference": "0c538efb3c24bc8930c69838490d1923f56ac816"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LambdaTT/log/zipball/afc8a3dd21faa64eaa0324649e0a69239b1b34cf",
-                "reference": "afc8a3dd21faa64eaa0324649e0a69239b1b34cf",
+                "url": "https://api.github.com/repos/LambdaTT/log/zipball/0c538efb3c24bc8930c69838490d1923f56ac816",
+                "reference": "0c538efb3c24bc8930c69838490d1923f56ac816",
                 "shasum": ""
             },
-            "time": "2025-07-01T04:22:47+00:00",
+            "time": "2025-07-14T20:11:41+00:00",
             "type": "splitphp-module",
             "installation-source": "dist",
             "autoload": {
@@ -350,26 +350,26 @@
             "description": "A SplitPHP Framework plugin to capture, organize and view the framework's logs.",
             "support": {
                 "issues": "https://github.com/LambdaTT/log/issues",
-                "source": "https://github.com/LambdaTT/log/tree/v0.2.3"
+                "source": "https://github.com/LambdaTT/log/tree/v0.2.4"
             },
             "install-path": "../../modules/log"
         },
         {
             "name": "lambdatt-php/messaging",
-            "version": "v0.1.1",
-            "version_normalized": "0.1.1.0",
+            "version": "v0.1.2",
+            "version_normalized": "0.1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LambdaTT/messaging.git",
-                "reference": "95e25dd842423fd4aeae990398b19328e7e49ec1"
+                "reference": "851739460032511d116fc36da3370fe83df5c600"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LambdaTT/messaging/zipball/95e25dd842423fd4aeae990398b19328e7e49ec1",
-                "reference": "95e25dd842423fd4aeae990398b19328e7e49ec1",
+                "url": "https://api.github.com/repos/LambdaTT/messaging/zipball/851739460032511d116fc36da3370fe83df5c600",
+                "reference": "851739460032511d116fc36da3370fe83df5c600",
                 "shasum": ""
             },
-            "time": "2025-06-20T03:07:25+00:00",
+            "time": "2025-07-14T20:10:42+00:00",
             "type": "splitphp-module",
             "installation-source": "dist",
             "autoload": {
@@ -390,26 +390,26 @@
             "description": "A SplitPHP Framework plugin which allows a messaging and notification system",
             "support": {
                 "issues": "https://github.com/LambdaTT/messaging/issues",
-                "source": "https://github.com/LambdaTT/messaging/tree/v0.1.1"
+                "source": "https://github.com/LambdaTT/messaging/tree/v0.1.2"
             },
             "install-path": "../../modules/messaging"
         },
         {
             "name": "lambdatt-php/modcontrol",
-            "version": "v0.1.4",
-            "version_normalized": "0.1.4.0",
+            "version": "v0.1.5",
+            "version_normalized": "0.1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LambdaTT/modcontrol.git",
-                "reference": "a410ba5d91f77149a37d0e81d2dae667101e8f7e"
+                "reference": "7695f249865905981508c813511070c172d82c25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LambdaTT/modcontrol/zipball/a410ba5d91f77149a37d0e81d2dae667101e8f7e",
-                "reference": "a410ba5d91f77149a37d0e81d2dae667101e8f7e",
+                "url": "https://api.github.com/repos/LambdaTT/modcontrol/zipball/7695f249865905981508c813511070c172d82c25",
+                "reference": "7695f249865905981508c813511070c172d82c25",
                 "shasum": ""
             },
-            "time": "2025-06-26T22:23:14+00:00",
+            "time": "2025-07-14T20:10:20+00:00",
             "type": "splitphp-module",
             "installation-source": "dist",
             "autoload": {
@@ -430,26 +430,26 @@
             "description": "A SplitPHP Framework plugin to provide control over modules and entities inside your application.",
             "support": {
                 "issues": "https://github.com/LambdaTT/modcontrol/issues",
-                "source": "https://github.com/LambdaTT/modcontrol/tree/v0.1.4"
+                "source": "https://github.com/LambdaTT/modcontrol/tree/v0.1.5"
             },
             "install-path": "../../modules/modcontrol"
         },
         {
             "name": "lambdatt-php/multitenancy",
-            "version": "v0.1.2",
-            "version_normalized": "0.1.2.0",
+            "version": "v0.1.3",
+            "version_normalized": "0.1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LambdaTT/multitenancy.git",
-                "reference": "9e3a3775aba4ac95b9b83a44d626c1a811c58107"
+                "reference": "0f5c8f2c5fa36b71ce77b81b1dfda172827b9251"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LambdaTT/multitenancy/zipball/9e3a3775aba4ac95b9b83a44d626c1a811c58107",
-                "reference": "9e3a3775aba4ac95b9b83a44d626c1a811c58107",
+                "url": "https://api.github.com/repos/LambdaTT/multitenancy/zipball/0f5c8f2c5fa36b71ce77b81b1dfda172827b9251",
+                "reference": "0f5c8f2c5fa36b71ce77b81b1dfda172827b9251",
                 "shasum": ""
             },
-            "time": "2025-07-10T20:04:18+00:00",
+            "time": "2025-07-14T20:11:12+00:00",
             "type": "splitphp-module",
             "installation-source": "dist",
             "autoload": {
@@ -470,26 +470,26 @@
             "description": "A SplitPHP Framework plugin for multitenancy support.",
             "support": {
                 "issues": "https://github.com/LambdaTT/multitenancy/issues",
-                "source": "https://github.com/LambdaTT/multitenancy/tree/v0.1.2"
+                "source": "https://github.com/LambdaTT/multitenancy/tree/v0.1.3"
             },
             "install-path": "../../modules/multitenancy"
         },
         {
             "name": "lambdatt-php/settings",
-            "version": "v0.1.2",
-            "version_normalized": "0.1.2.0",
+            "version": "v0.1.3",
+            "version_normalized": "0.1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LambdaTT/settings.git",
-                "reference": "a33e6354361d8d5a5fc45331ea354cbf05ee41a4"
+                "reference": "20b6501ee09fcd342e2732da6e41f666181c9b5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LambdaTT/settings/zipball/a33e6354361d8d5a5fc45331ea354cbf05ee41a4",
-                "reference": "a33e6354361d8d5a5fc45331ea354cbf05ee41a4",
+                "url": "https://api.github.com/repos/LambdaTT/settings/zipball/20b6501ee09fcd342e2732da6e41f666181c9b5f",
+                "reference": "20b6501ee09fcd342e2732da6e41f666181c9b5f",
                 "shasum": ""
             },
-            "time": "2025-06-26T15:40:52+00:00",
+            "time": "2025-07-14T20:11:18+00:00",
             "type": "splitphp-module",
             "installation-source": "dist",
             "autoload": {
@@ -510,26 +510,26 @@
             "description": "A SplitPHP Framework plugin for create a general purpose settings control",
             "support": {
                 "issues": "https://github.com/LambdaTT/settings/issues",
-                "source": "https://github.com/LambdaTT/settings/tree/v0.1.2"
+                "source": "https://github.com/LambdaTT/settings/tree/v0.1.3"
             },
             "install-path": "../../modules/settings"
         },
         {
             "name": "lambdatt-php/utils",
-            "version": "v0.1.3",
-            "version_normalized": "0.1.3.0",
+            "version": "v0.1.4",
+            "version_normalized": "0.1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LambdaTT/utils.git",
-                "reference": "d976c816b937e3cd940ab748ccec8f18154f7363"
+                "reference": "0c1eb506b6410f27052bd3698615c929578fdd73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LambdaTT/utils/zipball/d976c816b937e3cd940ab748ccec8f18154f7363",
-                "reference": "d976c816b937e3cd940ab748ccec8f18154f7363",
+                "url": "https://api.github.com/repos/LambdaTT/utils/zipball/0c1eb506b6410f27052bd3698615c929578fdd73",
+                "reference": "0c1eb506b6410f27052bd3698615c929578fdd73",
                 "shasum": ""
             },
-            "time": "2025-07-10T02:06:50+00:00",
+            "time": "2025-07-14T20:11:23+00:00",
             "type": "splitphp-module",
             "installation-source": "dist",
             "autoload": {
@@ -550,7 +550,7 @@
             "description": "A SplitPHP Framework plugin which provides helpers and general utilities out of the box.",
             "support": {
                 "issues": "https://github.com/LambdaTT/utils/issues",
-                "source": "https://github.com/LambdaTT/utils/tree/v0.1.3"
+                "source": "https://github.com/LambdaTT/utils/tree/v0.1.4"
             },
             "install-path": "../../modules/utils"
         },
