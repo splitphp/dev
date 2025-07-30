@@ -27,17 +27,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 use \SplitPHP\System;
-use \SplitPHP\Helpers;
 
 // Includes main class System:
 require_once __DIR__ . "/../core/kernel/class.system.php";
-require_once __DIR__ . "/../core/kernel/class.helpers.php";
-
-// Initiate the application, running the main class System:
-try {
-  new System();
-  die;
-} catch (Exception $ex) {
-  Helpers::Log()->error('sys_error', $ex);
-  throw $ex;
-}
+new System();
