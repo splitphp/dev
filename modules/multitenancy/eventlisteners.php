@@ -3,10 +3,12 @@
 namespace Multitenancy\EventListeners;
 
 use SplitPHP\System;
+use SplitPHP\Execution;
 use SplitPHP\Utils;
 use SplitPHP\EventListener;
 use SplitPHP\Database\Database;
 use SplitPHP\Database\Dbmetadata;
+use SplitPHP\Exceptions\NotFound;
 use Exception;
 
 class Multitenancy extends EventListener
@@ -17,21 +19,23 @@ class Multitenancy extends EventListener
 
     $this->addEventListener('request.before', function ($evt) {
       // Exclude Logs and API Docs from multitenancy:
-      if (preg_match('/^\/log(?:$|\/.*)$/', $_SERVER['REQUEST_URI']) || $_SERVER['REQUEST_URI'] == '/') return;
+      if ($_SERVER['REQUEST_URI'] == '/') return;
 
-      $reqArgs = $evt->info()->getBody();
+      $req = $evt->info();
+      $reqArgs = $req->getBody();
 
       if (!empty($reqArgs['tenant_key'])) {
         $tenant = $this->getService('multitenancy/tenant')->get($reqArgs['tenant_key']);
+        $req->unsetBody('tenant_key');
       } else {
         $tenant = $this->getService('multitenancy/tenant')->detect();
+
         // Handle IAM reset pass for multitenancy:
-        $host = parse_url($_SERVER['HTTP_ORIGIN'] ?? ($_SERVER['HTTP_REFERER'] ?? $_SERVER['HTTP_HOST']))['host'];
         if (empty(getenv('RESETPASS_URL')))
-          define('RESETPASS_URL', "https://{$host}/reset-password");
+          define('RESETPASS_URL', "https://" . TENANT_HOST . "/reset-password");
       }
 
-      if (empty($tenant)) throw new Exception("It was not possible to identify the tenant with provided key.");
+      if (empty($tenant)) throw new NotFound("It was not possible to identify the tenant with provided key.");
 
       define('TENANT_KEY', $tenant->ds_key);
       define('TENANT_NAME', $tenant->ds_name);
@@ -42,6 +46,23 @@ class Multitenancy extends EventListener
 
     $this->addEventListener('command.before', function ($evt) {
       $execution = $evt->info();
+
+      $ignoreList = [
+        'server:start',
+        'server:stop',
+        'setup',
+        'help',
+        'generate:cli',
+        'generate:migration',
+        'generate:seed',
+        'generate:webservice',
+      ];
+
+      $fullCommand = $execution->getFullCmd();
+      if (in_array($fullCommand, $ignoreList)) {
+        return;
+      }
+
       $module = $execution->getArgs()['--module'] ?? null;
 
       if ($module == 'multitenancy' || !Dbmetadata::tableExists('MTN_TENANT')) return;
@@ -65,7 +86,10 @@ class Multitenancy extends EventListener
         Utils::printLn();
         Database::setName($t->ds_database_name);
 
-        System::runCommand($execution);
+        $newExecution = new Execution(['console', $fullCommand, ...$execution->getArgs()]);
+        System::runCommand($newExecution);
+
+        unset($newExecution);
       }
     });
   }

@@ -3,6 +3,7 @@
 namespace Log\Services;
 
 use SplitPHP\Service;
+use SplitPHP\Utils;
 
 class LogService extends Service
 {
@@ -16,11 +17,26 @@ class LogService extends Service
 
     $params['dt_log'] = $params['dt_log'] ?? '$btwn|' . "{$begginingOfDay}|{$endOfDay}";
 
-    return $this->getDao('LOG_RECORD')
+    $result = [];
+    if (!isset($params['ds_context'])) {
+      unset($params['ds_context']);
+      $result = [
+        'server' => $this->serverErrorLog(),
+      ];
+    }
+
+    $this->getDao('LOG_RECORD')
       ->bindParams($params)
-      ->fetch(function (&$record) {
+      ->fetch(function (&$record) use (&$result) {
         $record->tx_message = json_decode($record->tx_message) ?? $record->tx_message;
+        if (!array_key_exists($record->ds_context, $result)) {
+          $result[$record->ds_context] = [];
+        }
+
+        $result[$record->ds_context][]  = $record;
       });
+
+    return $result;
   }
 
   public function serverErrorLog($reverse = true)
@@ -61,9 +77,16 @@ class LogService extends Service
 
     // Validate the token (this is just a placeholder, implement your own logic)
     $token = str_replace('Bearer ', '', $authHeader);
-    if ($token != hash('sha256', PUBLIC_KEY))
+    $decrypted = Utils::dataDecrypt($token, PRIVATE_KEY);
+    if ($decrypted != hash('sha256', PUBLIC_KEY))
       return false;
 
     return true;
+  }
+
+  public function clear()
+  {
+    $this->getDao('LOG_RECORD')
+      ->delete();
   }
 }

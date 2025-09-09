@@ -8,7 +8,7 @@ use SplitPHP\Database\Dao;
 
 class Commands extends Cli
 {
-  public function init()
+  public function init(): void
   {
     $this->addCommand('workflows:list', function (array $args) {
       $getRows = function ($params) {
@@ -146,15 +146,10 @@ class Commands extends Cli
       Utils::printLn("Welcome to the BPM Step Removal Command!");
       Utils::printLn();
       $stepId = readline("  >> Please, enter the Step ID you want to remove: ");
-      $step = $this->getDao('BPM_STEP')
-        ->filter('id_bpm_step', $stepId)
-        ->first();
-      if (!$step) {
-        Utils::printLn("  >> Step with ID {$stepId} not found.");
-        return;
-      }
 
-      $this->getDao('BPM_STEP')->delete($step);
+      $this->getDao('BPM_STEP')
+        ->filter('id_bpm_step', $stepId)
+        ->delete();
       Utils::printLn("  >> Step with ID {$stepId} removed successfully!");
     });
 
@@ -199,15 +194,10 @@ class Commands extends Cli
       Utils::printLn("Welcome to the BPM Transition Removal Command!");
       Utils::printLn();
       $transitionId = readline("  >> Please, enter the Transition ID you want to remove: ");
-      $transition = $this->getDao('BPM_TRANSITION')
-        ->filter('id_bpm_transition', $transitionId)
-        ->first();
-      if (!$transition) {
-        Utils::printLn("  >> Transition with ID {$transitionId} not found.");
-        return;
-      }
 
-      $this->getDao('BPM_TRANSITION')->delete($transition);
+      $this->getDao('BPM_TRANSITION')
+        ->filter('id_bpm_transition', $transitionId)
+        ->delete();
       Utils::printLn("  >> Transition with ID {$transitionId} removed successfully!");
     });
 

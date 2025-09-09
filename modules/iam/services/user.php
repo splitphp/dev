@@ -28,15 +28,20 @@ namespace Iam\Services;
 
 use SplitPHP\Service;
 use Exception;
+use SplitPHP\Database\Database;
 use SplitPHP\Database\Dbmetadata;
+use SplitPHP\Exceptions\BadRequest;
+use SplitPHP\Exceptions\Conflict;
+use SplitPHP\Exceptions\FailedValidation;
 
 class User extends Service
 {
   private int $pswdLvl = 0; // Password level, default is 0 (no requirements)
 
-  public function init()
+  public function __construct()
   {
-    $this->setConfigs();
+    if (!defined('RESETPASS_URL'))
+      define('RESETPASS_URL', getenv('RESETPASS_URL'));
   }
 
   public function setPswdLvl(int $pswdLvl)
@@ -136,7 +141,7 @@ class User extends Service
     // Treat Avatar img file upload:
     if (!empty($data['user_avatar'])) {
       $avatarFile = $this->getService('filemanager/file')
-        ->create($data['user_avatar']['name'], $data['user_avatar']['path'], 'Y');
+        ->add($data['user_avatar']['name'], $data['user_avatar']['path'], 'Y');
       if (!empty($avatarFile))
         $data['id_fmn_file_avatar'] = $avatarFile->id_fmn_file;
     }
@@ -166,7 +171,7 @@ class User extends Service
     // Validates input password:
     if (!empty($data['ds_password'])) {
       $this->validatePassword($data['ds_password']);
-      $data['ds_password'] = hash('sha256', $data['ds_password']);
+      $data['ds_password'] = password_hash($data['ds_password'], PASSWORD_DEFAULT);
     } else unset($data['ds_password']);
 
     // Removes forbidden fields from $data:
@@ -204,7 +209,7 @@ class User extends Service
       }
 
       $avatarFile = $this->getService('filemanager/file')
-        ->create($_FILES['user_avatar']['name'], $_FILES['user_avatar']['tmp_name'], 'Y');
+        ->add($_FILES['user_avatar']['name'], $_FILES['user_avatar']['tmp_name'], 'Y');
       if (!empty($avatarFile))
         $data['id_fmn_file_avatar'] = $avatarFile->id_fmn_file;
     }
@@ -250,9 +255,8 @@ class User extends Service
 
     $results = [];
     // Re-create user's profiles setup.
-    foreach ($profiles as $prf) {
-      $prf = (array)$prf; // Ensure $prf is an array
-      $prf = $this->getService('iam/accessprofile')->get(['ds_key' => $prf['ds_key']]);
+    foreach ($profiles as $prfKey) {
+      $prf = $this->getService('iam/accessprofile')->get(['ds_key' => $prfKey]);
 
       $results[] = $this->getDao('IAM_ACCESSPROFILE_USER')->insert([
         'id_iam_user' => $userId,
@@ -264,14 +268,15 @@ class User extends Service
   }
 
   // Sends a "change password" e-mail to the user identified by its e-mail address.
-  public function requestPasswordReset($params)
+  public function requestPasswordReset($email)
   {
     // Check for a valid e-mail address
-    if (filter_var($params['ds_email'], FILTER_VALIDATE_EMAIL) === false) throw new Exception("Forneça um e-mail válido.", BAD_REQUEST);
+    if (filter_var($email, FILTER_VALIDATE_EMAIL) === false)
+      throw new BadRequest("Forneça um e-mail válido.");
 
     // Get user data by its e-mail address. If no user is found, throws exception.
-    $user = $this->get(['ds_email' => $params['ds_email']]);
-    if (empty($user)) throw new Exception("E-mail inexistente.", VALIDATION_FAILED);
+    $user = $this->get(['ds_email' => $email]);
+    if (empty($user)) throw new FailedValidation("E-mail inexistente.");
 
     // Creates a new authentication token.
     $token = $this->getService('iam/authtoken')->create($user->ds_key, 60 * 60 * 24); // 24 hours
@@ -298,7 +303,8 @@ class User extends Service
   private function validateEmail($data, $userId = null)
   {
     // Check if the e-mail contains the proper string pattern.
-    if (filter_var($data['ds_email'], FILTER_VALIDATE_EMAIL) === false) throw new Exception("Forneça um e-mail válido.", VALIDATION_FAILED);
+    if (filter_var($data['ds_email'], FILTER_VALIDATE_EMAIL) === false)
+      throw new BadRequest("Forneça um e-mail válido.");
 
     // Check if there is another user registered with the same e-mail address.
     $sql = "SELECT id_iam_user FROM `IAM_USER` WHERE ds_email = ?ds_email? ";
@@ -312,7 +318,7 @@ class User extends Service
 
     $dbData = $dbData->find($sql);
 
-    if (!empty($dbData)) throw new Exception("Já existe outro usuário cadastrado com este e-mail.", CONFLICT);
+    if (!empty($dbData)) throw new Conflict("Já existe outro usuário cadastrado com este e-mail.");
   }
 
   /**
@@ -347,7 +353,7 @@ class User extends Service
       if (empty(preg_match('/[!@#$_]/m', $password))) $failure = true;
     }
 
-    if ($failure) throw new Exception('A senha fornecida não atende aos requisitos de segurança.', VALIDATION_FAILED);
+    if ($failure) throw new FailedValidation('A senha fornecida não atende aos requisitos de segurança.');
   }
 
   /**
@@ -357,7 +363,7 @@ class User extends Service
    */
   public function filterUserData(&$data)
   {
-    require_once CORE_PATH . '/database/' . DBTYPE . '/class.dbmetadata.php';
+    require_once CORE_PATH . '/database/' . Database::getRdbmsName() . '/class.dbmetadata.php';
     $tbInfo = Dbmetadata::tbInfo('IAM_USER');
 
     $data = $this->getService('utils/misc')->dataWhiteList($data, array_map(function ($c) {
@@ -374,7 +380,7 @@ class User extends Service
    */
   public function removeUserData(&$data)
   {
-    require_once CORE_PATH . '/database/' . DBTYPE . '/class.dbmetadata.php';
+    require_once CORE_PATH . '/database/' . Database::getRdbmsName() . '/class.dbmetadata.php';
     $tbInfo = Dbmetadata::tbInfo('IAM_USER');
 
     $data = $this->getService('utils/misc')->dataBlackList($data, array_map(function ($c) {
@@ -420,11 +426,5 @@ class User extends Service
     }
 
     return $results;
-  }
-
-  private function setConfigs()
-  {
-    if (!defined('RESETPASS_URL'))
-      define('RESETPASS_URL', getenv('RESETPASS_URL'));
   }
 }

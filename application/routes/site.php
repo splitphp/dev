@@ -13,7 +13,24 @@ class Site extends WebService
 
     // Home Page Endpoints:
     $this->addEndpoint(['GET', 'POST', 'PUT'], '/home', function ($input) {
-      throw new Exceptions\BadRequest("This is a test endpoint for POST and PUT requests.");
+
+      // $added = $this->getDao('Test')->insert([
+      //   (object) [
+      //     'nr_test' => 123,
+      //     'name' => 'Teste 123',
+
+      //   ],
+      //   (object) [
+      //     'nr_test' => 321,
+      //     'name' => 'Teste 321',
+      //   ],
+      // ]);
+
+      $input = $this->getDao('Test')
+        ->filter('t')->in([])
+        ->find(
+          "SELECT * FROM Test WHERE nr_test IN ?t?"
+        );
 
       return $this->response
         ->withStatus(200)
