@@ -26,11 +26,8 @@ class Site extends WebService
       //   ],
       // ]);
 
-      $input = $this->getDao('Test')
-        ->filter('t')->in([])
-        ->find(
-          "SELECT * FROM Test WHERE nr_test IN ?t?"
-        );
+      $input = $this->getDao('Person')
+        ->find();
 
       return $this->response
         ->withStatus(200)
