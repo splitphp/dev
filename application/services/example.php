@@ -1,6 +1,6 @@
 <?php
 
-namespace application\services;
+namespace Application\Services;
 
 use \SplitPHP\Service;
 
