@@ -12,29 +12,20 @@ class Site extends WebService
     $this->setAntiXsrfValidation(false);
 
     // Home Page Endpoints:
-    $this->addEndpoint(['GET', 'POST', 'PUT'], '/home', function ($input) {
+    $this->setAntiXsrfValidation(false);
 
-      // $added = $this->getDao('Test')->insert([
-      //   (object) [
-      //     'nr_test' => 123,
-      //     'name' => 'Teste 123',
+    // Home Page Endpoints:
+    $this->addEndpoint('GET', '/home', function ($params) {
+      $message = $this->getService('example')->welcomeMsg();
 
-      //   ],
-      //   (object) [
-      //     'nr_test' => 321,
-      //     'name' => 'Teste 321',
-      //   ],
-      // ]);
-
-      $input = $this->getDao('Test')
-        ->filter('t')->in([])
-        ->find(
-          "SELECT * FROM Test WHERE nr_test IN ?t?"
-        );
+      $templateVars = [
+        'message' => $message,
+        'params' => $params
+      ];
 
       return $this->response
         ->withStatus(200)
-        ->withData($input);
+        ->withHTML($this->renderTemplate('site/home', $templateVars));
     });
   }
 }
