@@ -3,7 +3,7 @@
         'name' => 'splitphp/starter',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'd16bfb495f164552e45dbc69c5c6ab858d18fc86',
+        'reference' => '07399336fbba7ea73de7f2d5d94acd75d9d0bb49',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -43,7 +43,7 @@
         'splitphp/starter' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'd16bfb495f164552e45dbc69c5c6ab858d18fc86',
+            'reference' => '07399336fbba7ea73de7f2d5d94acd75d9d0bb49',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
